@@ -56,7 +56,6 @@ spec:
               name: config-volume
               subPath: nginx.conf
 ---
-# TODO add an ingress for consistent URL
 kind: Service
 apiVersion: v1
 metadata:
