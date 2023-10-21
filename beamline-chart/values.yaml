@@ -1,0 +1,79 @@
+# default values for all IOCs on bl38p
+# see end of file for values that may be overridden per individual IOC
+
+beamline: bl38p
+# we use the default service account in the namespace so leave this out
+# if you need to specify an alternative then uncomment below
+# serviceAccountName: k8s-p38-iocs
+
+# useHostNetwork - use host network for IOC - required for Channel Access
+# to work outside of the cluster
+hostNetwork: true
+
+# useAffinity - only run on nodes with label beamline:<beamline-name>
+# Not using this now that we have cluster per beamline
+# However if you are using one cluster for multiple beamlines / domains
+# Then label the local nodes for each beamline and switch to true
+useAffinity: false
+
+# root folder for ioc source/binaries inside generic IOC container
+iocFolder: /epics/ioc
+iocConfig: /epics/ioc/config
+# scripts for controlling the IOC
+start: /epics/ioc/start.sh
+stop: /epics/ioc/stop.sh
+liveness: /epics/ioc/liveness.sh
+
+# the following are added to the pod's environment
+globalenv:
+  # Where to find RTEMS IOC files
+  - name: "K8S_IOC_TFTP_ADDR"
+    value: "172.23.168.220"
+  - name: "K8S_IOC_TFTP_PORT"
+    value: "69"
+  - name: "K8S_IOC_NFS_MOUNT"
+    value: "172.23.168.220:iocs"
+
+# reasonable defaults for securityContext
+securityContext:
+  allowPrivilegeEscalation: false
+  # runAsUser: 37143
+  # runAsGroup: 37143
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+
+########################################################################################
+# The following values are expected to be overridden in individual IOC values.yaml
+########################################################################################
+
+# this value is the only mandatory override
+# note that the configuration for the generic IOC is provided by placing its
+# config folder into beamline-chart/config. When the chart is packaged, the
+# template
+image:
+
+# a volume to mount for writing data to. This can be a PVC or a hostPath
+# the PVC
+dataVolume:
+  # Create a PVC called {{ .Chart.Name }}-data when true
+  pvc: false
+  # A path on the host machine to write data into. Also used as the path that the
+  # pvc or hostPath will be mounted at
+  hostPath: /dls/p38/data/
+
+# use the shared PVC for publishing opi files over http (see services/opis)
+opisClaim: bl38p-opi-claim
+# use the shared PVC autosave files (comment out for no autosave)
+autosaveClaim: bl38p-autosave-claim
+
+# default resource limits
+resources:
+  limits:
+    cpu: 500m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 64Mi

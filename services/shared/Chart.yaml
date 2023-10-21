@@ -1,0 +1,13 @@
+# this chart should be installed once per beamline and be the first
+# chart installed as it creates resources share by all iocs and other
+# EPICS services
+
+apiVersion: v2
+name: bl38p-shared
+description: |
+  A set of PVCs to share between pods for a beamline
+
+type: application
+
+version: 0.1.0
+appVersion: 0.1.0

@@ -1,0 +1,76 @@
+# a config map to contain nginx config - ingests the files in config folder
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name:  {{ .Chart.Name }}-nginx-config
+  labels:
+    app: {{ .Chart.Name }}
+    beamline: {{ .Values.beamline }}
+data:
+{{ (.Files.Glob "config/*").AsConfig | indent 2 }}
+  version.txt: |
+    IOC {{ .Release.Name }} version {{ .Chart.AppVersion }}
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: {{ .Chart.Name }}
+  labels:
+    app: {{ .Chart.Name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+    spec:
+      volumes:
+        - name: html-volume
+          persistentVolumeClaim:
+            claimName: {{ .Values.beamline }}-opi-claim
+        - name: config-volume
+          configMap:
+            name: {{ .Chart.Name }}-nginx-config
+      containers:
+        - name: server
+          image: {{ .Values.image }}
+          resources:
+            requests:
+              memory: 100Mi
+              cpu: 200m
+            limits:
+              memory: 500Mi
+              cpu: 600m
+          ports:
+            - containerPort: 90
+              protocol: TCP
+          volumeMounts:
+            # - mountPath: /opis
+            - mountPath: /usr/share/nginx/html
+              name: html-volume
+            # mount a config file over the default nginx config
+            - mountPath: /etc/nginx/nginx.conf
+              name: config-volume
+              subPath: nginx.conf
+---
+# TODO add an ingress for consistent URL
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Chart.Name }}
+  labels:
+    app: {{ .Chart.Name }}
+spec:
+  type: LoadBalancer
+  externalTrafficPolicy: Local
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 8080
+  sessionAffinity: None
+  selector:
+    app: {{ .Chart.Name }}

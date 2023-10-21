@@ -1,0 +1,9 @@
+apiVersion: v2
+name: bl38p-opis
+description: |
+  A service for sharing bob files to phoebus for all iocs on the beamline.
+
+type: application
+
+version: 0.1.0
+appVersion: 0.1.0
