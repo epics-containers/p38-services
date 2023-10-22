@@ -9,7 +9,7 @@ if [ "$0" = "$BASH_SOURCE" ]; then
     exit 1
 fi
 
-THIS_DIR=$(dirname ${0})
+THIS_DIR=$(dirname ${BASH_SOURCE})
 
 echo "Loading IOC environment for BL38P ..."
 
@@ -23,25 +23,22 @@ export EC_GIT_ORG=https://github.com/epics-containers
 export EC_DOMAIN_REPO=git@github.com:epics-containers/bl38p.git
 # declare your centralised log server Web UI
 export EC_LOG_URL='https://graylog2.diamond.ac.uk/search?rangetype=relative&fields=message%2Csource&width=1489&highlightMessage=&relative=172800&q=pod_name%3A{ioc_name}*'
-# enforce a specific container cli - defaults to whatever is available
+# enforce a specific container cli - defaults to which is available
 # export EC_CONTAINER_CLI=podman
-# enable debug output in all 'ec' commands
+# enable debug output in all 'ec' commands leave blan
 # export EC_DEBUG=1
 
-# check if epics-containers-cli (ec command) is installed and install if not
-if ! ec --version &> /dev/null; then
-    # must be in a venv and this is the reliable check
-    if python3 -c 'import sys; sys.exit(0 if sys.base_prefix==sys.prefix else 1)'; then
-        echo "ERROR: Please activate a virtualenv and re-run"
-        return
-    elif ! ec --version &> /dev/null; then
-        pip install -r ${THIS_DIR}/requirements.txt
-    fi
-    ec --install-completion ${SHELL} &> /dev/null
+#  use the ec version from dls_sw/work/python3
+ln -fs /dls_sw/work/python3/ec-venv/bin/ec $HOME/.local/bin/ec
+# enable use of `. bl38p` to activate the environment
+if [[ ${THIS_DIR} != $HOME/.local/bin ]] ; then
+  cp ${THIS_DIR}/environment.sh $HOME/.local/bin/bl38p
 fi
-
 # enable shell completion for ec commands
 source <(ec --show-completion ${SHELL})
+
+ # TODO - in future all of this file will get absorbed into
+ # module load k8s-p38
 
 # the following configures kubernetes inside DLS.
 if module --version &> /dev/null; then
