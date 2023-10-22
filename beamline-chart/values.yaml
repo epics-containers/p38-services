@@ -51,11 +51,12 @@ securityContext:
 # The following values are expected to be overridden in individual IOC values.yaml
 ########################################################################################
 
-# this value is the only mandatory override
-# note that the configuration for the generic IOC is provided by placing its
-# config folder into beamline-chart/config. When the chart is packaged, the
-# template
+# these values are the only mandatory overrides. We supply image in the values.yaml
+# for each IOC instance. `ec ioc deploy` supplies ioc_name and ioc_version
+# on the command line to helm.
 image:
+ioc_name:
+ioc_version:
 
 # a volume to mount for writing data to. This can be a PVC or a hostPath
 # the PVC

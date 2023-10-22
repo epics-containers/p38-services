@@ -4,9 +4,9 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: {{ .Chart.Name }}-data
+  name: {{ .Values.beamline }}-data
   labels:
-    app: {{ .Chart.Name }}
+    app: {{ .Values.beamline }}-data
     beamline: {{ .Values.beamline }}
 spec:
   accessModes:
