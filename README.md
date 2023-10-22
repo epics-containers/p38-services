@@ -71,10 +71,12 @@ we will create the repository for the beamline BL16I.
    - now execute the following:
 
 ```bash
-git clone git@github.com:epics-containers/bl38p.git -b 2023.10.2
+git clone git@github.com:epics-containers/bl38p.git -b 2023.10.3
 mv bl38p bl16i
 cd bl16i
-sed -i -e s/ixx/i16/ -e s/xxi/16i/ $(find * -type f)
+sed -i -e s/p38/i16/g -e s/38p/16i/g -e s/38P/16I/g $(find * -type f)
+git checkout -b main
+git commit -am'switch to i16'
 # the repo uri copied from above steps is pasted below
 git remote set-url origin git@gitlab.diamond.ac.uk:controls/containers/beamline/bl16i.git
 git push -u origin main
