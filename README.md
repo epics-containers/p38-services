@@ -32,7 +32,7 @@ as follows:
 ```bash
 curl https://raw.githubusercontent.com/epics-containers/bl38p/main/environment.sh -o ~/.local/bin/bl38p
 
-~/.local/bin/bl38p
+source ~/.local/bin/bl38p
 ```
 
 2. Now if everything is working you should be able to see the IOC instances
