@@ -29,6 +29,7 @@ export EC_LOG_URL='https://graylog2.diamond.ac.uk/search?rangetype=relative&fiel
 # export EC_DEBUG=1
 
 #  use the ec version from dls_sw/work/python3
+mkdir -p $HOME/.local/bin
 ln -fs /dls_sw/work/python3/ec-venv/bin/ec $HOME/.local/bin/ec
 # enable use of `. bl38p` to activate the environment
 if [[ ${THIS_DIR} != $HOME/.local/bin ]] ; then

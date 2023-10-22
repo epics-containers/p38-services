@@ -5,14 +5,6 @@
 THIS_DIR=$(dirname ${0})
 set -ex
 
-# environment.sh desires a venv to be active - make a temp one for tests
-tmpvenv=$(mktemp -d)
-python3 -mvenv ${tmpvenv}
-source ${tmpvenv}/bin/activate
-
-# setup environment for epics-containers-cli (ec) to work with this domain
-source ${THIS_DIR}/environment.sh
-
 for ioc in iocs/*
 do
     if [ ! -d "${ioc}/config" ]; then
@@ -37,6 +29,4 @@ do
     ec -d dev stop || echo docker stop failed
 
 done
-
-rm -r ${tmpvenv}
 
