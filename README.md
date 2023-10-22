@@ -68,7 +68,9 @@ we will create the repository for the beamline BL16I.
    - uncheck `create readme`
    - click on the "Create Project" button
    - copy the repo URI from the example in `Create a new repository`
-   - now execute the following:
+
+2. Clone this template repository and replace its remote with the new
+   repository using the command sequence below.
 
 ```bash
 git clone git@github.com:epics-containers/bl38p.git -b 2023.10.3
@@ -81,3 +83,29 @@ git commit -am'switch to i16'
 git remote set-url origin git@gitlab.diamond.ac.uk:controls/containers/beamline/bl16i.git
 git push -u origin main
 ```
+
+3. Implement your own IOC instances for the new domain by adding subfolders
+   to /iocs. There will be example IOCs from the beamline you copied already in
+   here, you could choose to delete these or use them as a starting point for
+   your own IOCs.
+
+   Each IOC subfolder should contain the following:
+
+   - `values.yaml` - this is the helm chart values file for the IOC instance.
+     At a minimum it should contain the URI of the generic IOC container image
+     to use e.g.:
+
+     ```yaml
+     image: ghcr.io/epics-containers/ioc-adsimdetector-linux-runtime:23.10.1
+     ```
+
+     This yaml file may also override any of the settings in the beamline
+     helm chart's values file. See [values.yaml](beamline-chart/values.yaml)
+     for the full list of settings that can be overridden.
+
+   - `config` - this folder will be mounted into the Generic IOC at runtime at
+     `/epics/ioc/config`. This folder will contain the required files to make
+      the generic IOC into a specific IOC instance.
+
+      For the details of the contents of the config folder see the default
+      [start.sh](https://github.com/epics-containers/blxxi-template/blob/main/iocs/blxxi-ea-ioc-01/config/start.sh)
