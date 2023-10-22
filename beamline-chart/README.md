@@ -13,9 +13,7 @@ There are two other reasons for this approach:
 
 1. We prefer to have the entire definition of a beamline or accelerator
   domain in a single repository.
-1. We prefer for the chart name to be the same as the IOC name as this looks
-  better in K8S dashboard. (this can only be set in Chart.yaml)
-1. We prefer to set the Chart version (as well as appVersion)as this is the
+1. We prefer to set the Chart version (as well as appVersion) as this is the
   primary version that is shown in K8S the dashboard.
   (this can be changed at package time so does
   not strictly need to set be in this template)

@@ -3,9 +3,9 @@
 # EPICS services
 
 apiVersion: v2
-name: bl38p-shared
+name: domain-shared-pvcs
 description: |
-  A set of PVCs to share between pods for a beamline
+  A set of PVCs to share between pods for a beamline/accelerator domain
 
 type: application
 

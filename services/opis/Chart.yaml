@@ -1,5 +1,5 @@
 apiVersion: v2
-name: bl38p-opis
+name: domain-opis
 description: |
   A service for sharing bob files to phoebus for all iocs on the beamline.
 

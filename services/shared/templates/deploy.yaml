@@ -4,7 +4,7 @@ apiVersion: v1
 metadata:
   name: {{ .Values.beamline }}-opi-claim
   labels:
-    app: {{ .Chart.Name }}
+    app: {{ .Values.beamline }}-opi
     beamline: {{ .Values.beamline }}
 spec:
   accessModes:
@@ -19,7 +19,7 @@ apiVersion: v1
 metadata:
   name: {{ .Values.beamline }}-autosave-claim
   labels:
-    app: {{ .Chart.Name }}
+    app: {{ .Values.beamline }}-autosave
     beamline: {{ .Values.beamline }}
 spec:
   accessModes:
