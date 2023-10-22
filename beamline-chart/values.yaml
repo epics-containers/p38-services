@@ -37,6 +37,8 @@ globalenv:
 # reasonable defaults for securityContext
 securityContext:
   allowPrivilegeEscalation: false
+  # IMPORTANT if you want access to /dls/p38/data then the following should
+  # be set to p38detector account ID and group ID
   # runAsUser: 37143
   # runAsGroup: 37143
   # capabilities:
@@ -61,7 +63,8 @@ dataVolume:
   # Create a PVC called {{ .Chart.Name }}-data when true
   pvc: false
   # A path on the host machine to write data into. Also used as the path that the
-  # pvc or hostPath will be mounted at
+  # pvc or hostPath will be mounted at so that users need not be confused about
+  # inside/outside container paths.
   hostPath: /dls/p38/data/
 
 # use the shared PVC for publishing opi files over http (see services/opis)
