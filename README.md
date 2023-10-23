@@ -23,40 +23,38 @@ as follows:
    [use this form](https://jira.diamond.ac.uk/servicedesk/customer/portal/2/create/92)
    and ask for access to namespace `p38-iocs` on cluster `k8s-p38`.
 
+   ```bash
+   cd /tmp
+   curl -O https://raw.githubusercontent.com/epics-containers/bl38p/main/environment.sh
+   . environment.sh
+   . ~/.bash_profile # adds ~/.local/bin to path
+   ```
 
-```bash
-cd tmp
-curl -O https://raw.githubusercontent.com/epics-containers/bl38p/main/environment.sh
-. environment.sh
-```
-   Note that this places files
-   in your home directory under `~/.local/bin` and you may need to add this to
-   your `PATH` environment variable, however, if you use the standard DLS profile
-   this will be done for you next time you open a new shell.
+   Note that this places files in your home directory under `~/.local/bin`.
+   The standard DLS profile will add this directory to your `PATH` when you
+   log in. After logging out and back in again you can reload the bl38p
+   environment with the following command:
 
-   After the first invocation (and starting a new shell to add  `~/.local/bin` to
-   your path you can re-load the environment with this command:
-
-```bash
-. bl38p
-```
+   ```bash
+   . bl38p
+   ```
 
 2. Now if everything is working you should be able to see the IOC instances
    running on the kubernetes cluster as follows:
 
-```bash
-$ ec ps
-IOC_NAME          VERSION     STATE     RESTARTS   STARTED
-bl38p-ea-ioc-03   2023.10.2   Running   0          2023-10-21T19:10:33Z
-```
+   ```bash
+   $ ec ps
+   IOC_NAME          VERSION     STATE     RESTARTS   STARTED
+   bl38p-ea-ioc-03   2023.10.2   Running   0          2023-10-21T19:10:33Z
+   ```
 
 3. You can also take a look at what other commands are available:
 
-```bash
-ec --help
-ec ioc --help
-ec dev --help
-```
+   ```bash
+   ec --help
+   ec ioc --help
+   ec dev --help
+   ```
 
 4. For a visual interface to the ioc namespace on the cluster you can use the
    kubernetes dashboard at this URL:

@@ -47,13 +47,13 @@ if module --version &> /dev/null; then
         # set the default namespace for kubectl and helm (for convenience only)
         kubectl config set-context --current --namespace=p38-iocs
         # get running iocs: makes sure the user has provided credentials
-        ec ps
+        /dls_sw/work/python3/ec-venv/bin/ec ps
     fi
 fi
 
 # enable shell completion for ec commands
 shell=$(basename $SHELL)
-source <(ec --show-completion ${shell})
+source <(/dls_sw/work/python3/ec-venv/bin/ec --show-completion ${shell})
 source <(kubectl completion ${shell})
 source <(helm completion ${shell})
 # alias kubectl to k with completion
