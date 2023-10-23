@@ -36,7 +36,13 @@ if [[ ${THIS_DIR} != $HOME/.local/bin ]] ; then
   cp ${THIS_DIR}/environment.sh $HOME/.local/bin/bl38p
 fi
 # enable shell completion for ec commands
-source <(ec --show-completion ${SHELL})
+shell=$(basename $SHELL)
+source <(ec --show-completion ${shell})
+source <(kubectl completion ${shell})
+source <(helm completion ${shell})
+# alias kubectl to k with completion
+alias k=kubectl
+complete -F __start_kubectl k
 
  # TODO - in future all of this file will get absorbed into
  # module load k8s-p38
