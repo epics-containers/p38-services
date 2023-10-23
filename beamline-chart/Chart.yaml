@@ -1,6 +1,12 @@
 # A Helm Chart for an IOC instance
 apiVersion: v2
-name: ioc-instance
+name: ioc-instance-beamline
 
-# this is replaced by command line arguments when `ec` invokes helm
-version: 0.0.1
+version: 1.0.0
+
+type: application
+
+dependencies:
+  - name: ioc-instance
+    version: "0.0.0-b0"
+    repository: "oci://ghcr.io/epics-containers"
