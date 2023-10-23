@@ -9,11 +9,6 @@ primarily because helm cannot package the config folder at package time.
 This approach could therefore be reviewed once this PR is released:
 https://github.com/helm/helm/pull/10077
 
-The other reasons for this approach are:
-
-1. We prefer to have the entire definition of an IOC domain in a single repository.
-   rather than pulling the chart from a chart repository.
-
 To deploy at IOC using beamline chart make sure you have epics-containers-cli
 installed and you are connected to the correct kubernetes cluster.
 
