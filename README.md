@@ -1,26 +1,21 @@
 Beamline BL38P: a Test epics-containers Beamline
 ================================================
 
-This repository contains the configuration files for the IOC instances
-running within a domain at **Diamond Light Source**. This can be used as a
-template project for other beamlines and accelerator domains.
+This repository contains a specification of the IOC instances
+running within a domain at **Diamond Light Source**.
 
-This is a **Diamond Light Source** specific reference implementation of a beamline
-for [epics-containers](https://github.com/epics-containers).
+This is a **Diamond Light Source** specific reference
+implementation of a beamline for
+[epics-containers](https://github.com/epics-containers).
 
 
 Setting up your environment to use BL38P
 ----------------------------------------
 
-Inside DLS you can experiment with this beamline by setting up your environment
+Inside DLS you can access this beamline by setting up your environment
 as follows:
 
 1. Download the project's environment file using the curl command below.
-
-   Note that this places files
-   in your home directory under `~/.local/bin` and you may need to add this to
-   your `PATH` environment variable, however, if you use the standard DLS profile
-   this will be done for you next time you open a new shell.
 
    You will be asked for your cluster credentials which are the same as your
    linux login. Note that if you have not used this cluster before you may need
@@ -30,19 +25,29 @@ as follows:
 
 
 ```bash
-curl https://raw.githubusercontent.com/epics-containers/bl38p/main/environment.sh -o ~/.local/bin/bl38p
+cd tmp
+curl -O https://raw.githubusercontent.com/epics-containers/bl38p/main/environment.sh
+. environment.sh
+```
+   Note that this places files
+   in your home directory under `~/.local/bin` and you may need to add this to
+   your `PATH` environment variable, however, if you use the standard DLS profile
+   this will be done for you next time you open a new shell.
 
-source ~/.local/bin/bl38p
+   After the first invocation (and starting a new shell to add  `~/.local/bin` to
+   your path you can re-load the environment with this command:
+
+```bash
+. bl38p
 ```
 
 2. Now if everything is working you should be able to see the IOC instances
    running on the kubernetes cluster as follows:
 
 ```bash
-[hgv27681@pc0116 bl38p]$ ec ps
+$ ec ps
 IOC_NAME          VERSION     STATE     RESTARTS   STARTED
 bl38p-ea-ioc-03   2023.10.2   Running   0          2023-10-21T19:10:33Z
-[hgv27681@pc0116 bl38p]$
 ```
 
 3. You can also take a look at what other commands are available:
@@ -53,15 +58,19 @@ ec ioc --help
 ec dev --help
 ```
 
-4. For a visual interface to the ioc namespace you can use the kubernetes dashboard
-   as follows at this URL:
+4. For a visual interface to the ioc namespace on the cluster you can use the
+   kubernetes dashboard at this URL:
+
    https://k8s-p38-dashboard.diamond.ac.uk/#/pod?namespace=p38-iocs
 
 
-Using this Template to Create a New Beamline or Accelerator Domain
-==================================================================
+How to Create a New Beamline or Accelerator Domain
+==================================================
 
-This is simply a matter of taking a copy of this repository and changing the
+The p38 beamline is a reference implementation of a DLS beamline so we use it
+as a template for other beamlines and accelerator domains.
+
+To create a new domain take a copy of this repository and change the
 p38 and 38p references to the name of your domain. In the following example
 we will create the repository for the beamline BL16I.
 
