@@ -53,6 +53,11 @@ ec ioc --help
 ec dev --help
 ```
 
+4. For a visual interface to the ioc namespace you can use the kubernetes dashboard
+   as follows at this URL:
+   https://k8s-p38-dashboard.diamond.ac.uk/#/pod?namespace=p38-iocs
+
+
 Using this Template to Create a New Beamline or Accelerator Domain
 ==================================================================
 
