@@ -39,16 +39,14 @@ fi
  # TODO - in future all of this file will get absorbed into
  # module load k8s-p38
 
-# the following configures kubernetes inside DLS.
-if module --version &> /dev/null; then
-    if module avail k8s-p38 > /dev/null; then
-        module unload k8s-p38 > /dev/null
-        module load k8s-p38 > /dev/null
-        # set the default namespace for kubectl and helm (for convenience only)
-        kubectl config set-context --current --namespace=p38-iocs
-        # get running iocs: makes sure the user has provided credentials
-        /dls_sw/work/python3/ec-venv/bin/ec ps
-    fi
+# the following configures kubernetes inside DLS if the module is available
+if [[ $(module avail k8s-p38 2>&1) == *"k8s"* ]] ; then
+    module unload k8s-p38 > /dev/null
+    module load k8s-p38 > /dev/null
+    # set the default namespace for kubectl and helm (for convenience only)
+    kubectl config set-context --current --namespace=p38-iocs
+    # get running iocs: makes sure the user has provided credentials
+    /dls_sw/work/python3/ec-venv/bin/ec ps
 fi
 
 # enable shell completion for ec commands
