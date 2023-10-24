@@ -26,9 +26,9 @@ as follows:
 
    ```bash
    cd /tmp
-   curl -O https://raw.githubusercontent.com/epics-containers/bl38p/main/environment.sh
-   . environment.sh
+   curl -o ~/.local/bin/bl38p https://raw.githubusercontent.com/epics-containers/bl38p/main/environment.sh?token=$(date +%s)
    . ~/.bash_profile # adds ~/.local/bin to path
+   . bl38p
    ```
 
    You will be asked for your cluster credentials which are the same as your
