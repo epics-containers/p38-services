@@ -31,10 +31,6 @@ export EC_LOG_URL='https://graylog2.diamond.ac.uk/search?rangetype=relative&fiel
 #  use the ec version from dls_sw/work/python3
 mkdir -p $HOME/.local/bin
 ln -fs /dls_sw/work/python3/ec-venv/bin/ec $HOME/.local/bin/ec
-# enable use of `. bl38p` to activate the environment
-if [[ ${THIS_DIR} != $HOME/.local/bin ]] ; then
-  cp ${THIS_DIR}/environment.sh $HOME/.local/bin/bl38p
-fi
 
  # TODO - in future all of this file will get absorbed into
  # module load k8s-p38
@@ -49,7 +45,7 @@ if [[ $(module avail k8s-p38 2>&1) == *"k8s"* ]] ; then
     /dls_sw/work/python3/ec-venv/bin/ec ps
 fi
 
-# enable shell completion for ec commands
+# enable completion for all relevant commands
 shell=$(basename $SHELL)
 source <(/dls_sw/work/python3/ec-venv/bin/ec --show-completion ${shell})
 source <(kubectl completion ${shell})

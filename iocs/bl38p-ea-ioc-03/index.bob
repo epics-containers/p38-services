@@ -1,0 +1,1804 @@
+<display version="2.0.0">
+  <name>Display</name>
+  <x>0</x>
+  <y>0</y>
+  <width>1214</width>
+  <height>930</height>
+  <grid_step_x>4</grid_step_x>
+  <grid_step_y>4</grid_step_y>
+  <widget type="label" version="2.0.0">
+    <name>Title</name>
+    <class>TITLE</class>
+    <text>INDEX - PANDA:</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>1214</width>
+    <height>25</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>BITS</text>
+    <x>23</x>
+    <y>30</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>BITS.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>30</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>CALC1</text>
+    <x>23</x>
+    <y>55</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>CALC1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>55</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>CALC2</text>
+    <x>23</x>
+    <y>80</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>CALC2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>80</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>CLOCK1</text>
+    <x>23</x>
+    <y>105</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>CLOCK1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>105</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>CLOCK2</text>
+    <x>23</x>
+    <y>130</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>CLOCK2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>130</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>COUNTER8</text>
+    <x>23</x>
+    <y>155</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>COUNTER8.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>155</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>COUNTER7</text>
+    <x>23</x>
+    <y>180</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>COUNTER7.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>180</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>COUNTER6</text>
+    <x>23</x>
+    <y>205</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>COUNTER6.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>205</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>COUNTER5</text>
+    <x>23</x>
+    <y>230</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>COUNTER5.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>230</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>COUNTER4</text>
+    <x>23</x>
+    <y>255</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>COUNTER4.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>255</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>COUNTER3</text>
+    <x>23</x>
+    <y>280</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>COUNTER3.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>280</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>COUNTER2</text>
+    <x>23</x>
+    <y>305</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>COUNTER2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>305</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>COUNTER1</text>
+    <x>23</x>
+    <y>330</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>COUNTER1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>330</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>DIV1</text>
+    <x>23</x>
+    <y>355</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>DIV1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>355</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>DIV2</text>
+    <x>23</x>
+    <y>380</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>DIV2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>380</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>FILTER1</text>
+    <x>23</x>
+    <y>405</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>FILTER1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>405</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>FILTER2</text>
+    <x>23</x>
+    <y>430</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>FILTER2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>430</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>INENC1</text>
+    <x>23</x>
+    <y>455</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>INENC1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>455</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>INENC2</text>
+    <x>23</x>
+    <y>480</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>INENC2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>480</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>INENC3</text>
+    <x>23</x>
+    <y>505</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>INENC3.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>505</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>INENC4</text>
+    <x>23</x>
+    <y>530</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>INENC4.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>530</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>LUT8</text>
+    <x>23</x>
+    <y>555</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>LUT8.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>555</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>LUT2</text>
+    <x>23</x>
+    <y>580</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>LUT2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>580</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>LUT3</text>
+    <x>23</x>
+    <y>605</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>LUT3.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>605</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>LUT1</text>
+    <x>23</x>
+    <y>630</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>LUT1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>630</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>LUT6</text>
+    <x>23</x>
+    <y>655</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>LUT6.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>655</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>LUT7</text>
+    <x>23</x>
+    <y>680</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>LUT7.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>680</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>LUT4</text>
+    <x>23</x>
+    <y>705</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>LUT4.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>705</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>LUT5</text>
+    <x>23</x>
+    <y>730</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>LUT5.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>730</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>LVDSIN2</text>
+    <x>23</x>
+    <y>755</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>LVDSIN2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>755</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>LVDSIN1</text>
+    <x>23</x>
+    <y>780</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>LVDSIN1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>780</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>LVDSOUT2</text>
+    <x>23</x>
+    <y>805</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>LVDSOUT2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>805</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>LVDSOUT1</text>
+    <x>23</x>
+    <y>830</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>LVDSOUT1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>830</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>OUTENC2</text>
+    <x>23</x>
+    <y>855</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>OUTENC2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>855</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>OUTENC3</text>
+    <x>23</x>
+    <y>880</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>OUTENC3.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>880</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>OUTENC1</text>
+    <x>23</x>
+    <y>905</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>OUTENC1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>278</x>
+    <y>905</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>OUTENC4</text>
+    <x>426</x>
+    <y>30</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>OUTENC4.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>30</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>PCAP</text>
+    <x>426</x>
+    <y>55</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>PCAP.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>55</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>HDF5</text>
+    <x>426</x>
+    <y>80</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>HDF5.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>80</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>PCOMP1</text>
+    <x>426</x>
+    <y>105</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>PCOMP1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>105</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>PCOMP2</text>
+    <x>426</x>
+    <y>130</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>PCOMP2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>130</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>PGEN2</text>
+    <x>426</x>
+    <y>155</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>PGEN2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>155</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>PGEN1</text>
+    <x>426</x>
+    <y>180</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>PGEN1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>180</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>PULSE3</text>
+    <x>426</x>
+    <y>205</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>PULSE3.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>205</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>PULSE4</text>
+    <x>426</x>
+    <y>230</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>PULSE4.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>230</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>PULSE1</text>
+    <x>426</x>
+    <y>255</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>PULSE1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>255</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>PULSE2</text>
+    <x>426</x>
+    <y>280</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>PULSE2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>280</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>SEQ1</text>
+    <x>426</x>
+    <y>305</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>SEQ1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>305</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>SEQ2</text>
+    <x>426</x>
+    <y>330</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>SEQ2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>330</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>SFP2_ SYNC_ IN</text>
+    <x>426</x>
+    <y>355</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>SFP2_SYNC_IN.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>355</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>SFP2_ SYNC_ OUT</text>
+    <x>426</x>
+    <y>380</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>SFP2_SYNC_OUT.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>380</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>SFP3_ SYNC_ IN</text>
+    <x>426</x>
+    <y>405</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>SFP3_SYNC_IN.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>405</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>SFP3_ SYNC_ OUT</text>
+    <x>426</x>
+    <y>430</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>SFP3_SYNC_OUT.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>430</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>SRGATE4</text>
+    <x>426</x>
+    <y>455</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>SRGATE4.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>455</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>SRGATE1</text>
+    <x>426</x>
+    <y>480</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>SRGATE1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>480</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>SRGATE2</text>
+    <x>426</x>
+    <y>505</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>SRGATE2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>505</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>SRGATE3</text>
+    <x>426</x>
+    <y>530</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>SRGATE3.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>530</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>SYSTEM</text>
+    <x>426</x>
+    <y>555</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>SYSTEM.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>555</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLIN6</text>
+    <x>426</x>
+    <y>580</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLIN6.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>580</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLIN4</text>
+    <x>426</x>
+    <y>605</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLIN4.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>605</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLIN5</text>
+    <x>426</x>
+    <y>630</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLIN5.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>630</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLIN2</text>
+    <x>426</x>
+    <y>655</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLIN2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>655</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLIN3</text>
+    <x>426</x>
+    <y>680</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLIN3.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>680</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLIN1</text>
+    <x>426</x>
+    <y>705</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLIN1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>705</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLOUT3</text>
+    <x>426</x>
+    <y>730</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLOUT3.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>730</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLOUT7</text>
+    <x>426</x>
+    <y>755</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLOUT7.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>755</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLOUT10</text>
+    <x>426</x>
+    <y>780</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLOUT10.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>780</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLOUT8</text>
+    <x>426</x>
+    <y>805</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLOUT8.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>805</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLOUT9</text>
+    <x>426</x>
+    <y>830</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLOUT9.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>830</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLOUT6</text>
+    <x>426</x>
+    <y>855</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLOUT6.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>855</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLOUT4</text>
+    <x>426</x>
+    <y>880</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLOUT4.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>880</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLOUT5</text>
+    <x>426</x>
+    <y>905</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLOUT5.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>681</x>
+    <y>905</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLOUT2</text>
+    <x>829</x>
+    <y>30</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLOUT2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>1084</x>
+    <y>30</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>TTLOUT1</text>
+    <x>829</x>
+    <y>55</y>
+    <width>250</width>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>SubScreen</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLOUT1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>1084</x>
+    <y>55</y>
+    <width>125</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+</display>
