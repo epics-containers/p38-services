@@ -17,8 +17,6 @@ echo "Loading IOC environment for BL38P ..."
 export EC_REGISTRY_MAPPING='github.com=ghcr.io gitlab.diamond.ac.uk=gcr.io/diamond-privreg/controls/ioc'
 # the namespace to use for kubernetes deployments
 export EC_K8S_NAMESPACE=p38-iocs
-# the git organisation used for beamline repositories
-export EC_GIT_ORG=https://github.com/epics-containers
 # the git repo for this beamline (or accelerator domain)
 export EC_DOMAIN_REPO=git@github.com:epics-containers/bl38p.git
 # declare your centralised log server Web UI
