@@ -77,31 +77,25 @@ To create a new domain take a copy of this repository and change the
 p38 and 38p references to the name of your domain. In the following example
 we will create the repository for the beamline BL16I.
 
-1. Create a new completely blank repository in gitlab
-
-   - go to https://gitlab.diamond.ac.uk/controls/containers/beamline
-   - click on the "New Project" button and choose Blank Project
-   - give the project a name, e.g. `bl16i`
-   - uncheck `create readme`
-   - click on the "Create Project" button
-   - copy the repo URI from the example in `Create a new repository`
-
-2. Clone this template repository and replace its remote with the new
-   repository using the command sequence below.
+1. Clone this template repository and replace its remote with the new
+   repository using the command sequence below. (example is for i16 - replace
+   i16 with your beamline name)
 
 ```bash
-git clone git@github.com:epics-containers/bl38p.git -b 2023.10.3
+git clone git@github.com:epics-containers/bl38p.git
 mv bl38p bl16i
 cd bl16i
+
+# use sed to replace all occurrences of p38 with i16
 sed -i -e s/p38/i16/g -e s/38p/16i/g -e s/38P/16I/g $(find * -type f)
-git checkout -b main
-git commit -am'switch to i16'
-# the repo uri copied from above steps is pasted below
+
+# this will create a new repo for you in gitlab - CHECK FOR TYPOS
 git remote set-url origin git@gitlab.diamond.ac.uk:controls/containers/beamline/bl16i.git
+git commit -am'switch to i16'
 git push -u origin main
 ```
 
-3. Implement your own IOC instances for the new domain by adding subfolders
+2. Implement your own IOC instances for the new domain by adding subfolders
    to /iocs. There will be example IOCs from the beamline you copied already in
    here, you could choose to delete these or use them as a starting point for
    your own IOCs.
@@ -110,19 +104,29 @@ git push -u origin main
 
    - `values.yaml` - this is the helm chart values file for the IOC instance.
      At a minimum it should contain the URI of the generic IOC container image
-     to use e.g.:
+     to use. For example to use the current latest GigE camera Generic IOC
+     put the following in the values.yaml file:
 
      ```yaml
-     image: ghcr.io/epics-containers/ioc-adsimdetector-linux-runtime:23.10.1
+     image: ghcr.io/epics-containers/ioc-adaravis-linux-runtime:2023.11.1b5
      ```
 
      This yaml file may also override any of the settings in the beamline
-     helm chart's values file. See [values.yaml](beamline-chart/values.yaml)
+     helm chart's values file. See
+     [Beamline values.yaml](beamline-chart/values.yaml)
      for the full list of settings that can be overridden.
+
+     For an example of a GigE camera IOC instance for this beamline see:
+     [IOC values.yaml](iocs/bl38p-di-dcam-01/values.yaml).
 
    - `config` - this folder will be mounted into the Generic IOC at runtime at
      `/epics/ioc/config`. This folder will contain the required files to make
       the generic IOC into a specific IOC instance.
 
-      For the details of the contents of the config folder see the default
+      The 1st choice for the config folder should be an ibek IOC YAML file
+      For an example `config.yaml` for a GigE camera IOC see:
+      [config.yaml](iocs/bl38p-di-dcam-01/config/ioc.yaml).
+
+
+      For the details of all the options for what can go in the config folder see:
       [start.sh](https://github.com/epics-containers/blxxi-template/blob/main/iocs/blxxi-ea-ioc-01/config/start.sh)

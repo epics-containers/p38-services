@@ -1,0 +1,95 @@
+# yaml-language-server: $schema=https://github.com/epics-containers/ioc-adaravis/releases/download/2023.11.1b5/ibek.ioc.schema.json
+
+ioc_name: bl38p-di-dcam-01
+description: camera for diagnostic 3
+
+entities:
+  # set max array bytes so that the array plugin can send large image arrays
+  - type: epics.EpicsCaMaxArrayBytes
+    max_bytes: 6000000
+
+  # add a deviocStats instance to monitor the IOC
+  - type: devIocStats.iocAdminSoft
+    IOC: bl38p-di-dcam-01
+
+  # this pokes a PV to set the packet size used by the camera, after IOC startup
+  - type: epics.PostStartupCommand
+    command: dbpf ("BL38P-DI-DCAM-01:DET:GC_GevSCPSPacketSize","1500")
+
+  # Add a GigE camera at specific IP address with PV prefixes P and R
+  - type: ADAravis.aravisCamera
+    ADDR: 0
+    CLASS: AVT_Mako_G125B
+    ID: 172.23.191.97
+    P: BL38P-DI-DCAM-01
+    PORT: D3.CAM
+    R: ":DET:"
+    TIMEOUT: 1
+
+  # The remaining settings are for AreaDetector Plugins
+  - type: ADCore.NDROI
+    ADDR: 0
+    NDARRAY_ADDR: 0
+    NDARRAY_PORT: D3.CAM
+    P: BL38P-DI-DCAM-01
+    PORT: D3.roi
+    QUEUE: 16
+    R: ":ROI:"
+    TIMEOUT: 1
+
+  - type: ADCore.NDStats
+    ADDR: 0
+    HIST_SIZE: 256
+    NCHANS: 20000
+    NDARRAY_ADDR: 0
+    NDARRAY_PORT: D3.CAM
+    P: BL38P-DI-DCAM-01
+    PORT: D3.stat
+    QUEUE: 16
+    R: ":STAT:"
+    TIMEOUT: 1
+    XSIZE: 1292
+    YSIZE: 964
+
+  - type: ADCore.NDStdArrays
+    ADDR: 0
+    FTVL: UCHAR
+    NDARRAY_ADDR: 0
+    NDARRAY_PORT: D3.roi
+    NELEMENTS: 1245488
+    P: BL38P-DI-DCAM-01
+    PORT: D3.arr
+    QUEUE: 2
+    R: ":ARR:"
+    TIMEOUT: 1
+    TYPE: Int8
+
+  - type: ADCore.NDProcess
+    ADDR: 0
+    NDARRAY_ADDR: 0
+    NDARRAY_PORT: D3.CAM
+    P: BL38P-DI-DCAM-01
+    PORT: D3.proc
+    QUEUE: 16
+    R: ":PROC:"
+    TIMEOUT: 1
+
+  - type: ADCore.NDFileTIFF
+    ADDR: 0
+    NDARRAY_ADDR: 0
+    NDARRAY_PORT: D3.CAM
+    P: BL38P-DI-DCAM-01
+    PORT: D3.tiff
+    QUEUE: 16
+    R: ":TIFF:"
+    TIMEOUT: 1
+
+  - type: ADCore.NDFileHDF5
+    ADDR: 0
+    NDARRAY_ADDR: 0
+    NDARRAY_PORT: D3.CAM
+    P: BL38P-DI-DCAM-01
+    PORT: D3.hdf
+    QUEUE: 16
+    R: ":HDF5:"
+    TIMEOUT: 1
