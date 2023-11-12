@@ -9,7 +9,7 @@ primarily because helm cannot package the config folder at package time.
 This approach could therefore be reviewed once this PR is released:
 https://github.com/helm/helm/pull/10077
 
-To deploy at IOC using beamline chart make sure you have epics-containers-cli
+To deploy at IOC using the beamline chart make sure you have epics-containers-cli
 installed and you are connected to the correct kubernetes cluster.
 
 ```bash
