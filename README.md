@@ -61,6 +61,18 @@ as follows:
    ec dev --help
    ```
 
+
+1. To see the underlying commands that `ec` is using add the `-v` flag:
+
+   <pre><font color="#26A269">(dev) </font>[<font color="#12488B">hgv27681@pc0116</font> bl38p]$ ec -v ps
+   <font color="#5F8787">kubectl get namespace p38-iocs -o name</font>
+   <font color="#5F8787">kubectl -n p38-iocs get pod -l is_ioc==True -o custom-columns=IOC_NAME:metadata.labels.app,VERSION:metadata.labels.ioc_version,STATE:status.phase,RESTARTS:status.containerStatuses[0].restartCount,STARTED:metadata.managedFields[0].time</font>
+   IOC_NAME            VERSION             STATE     RESTARTS   STARTED
+   bl38p-ea-ioc-03     2023.10.27-b6.24    Running   0          2023-10-30T15:21:55Z
+   bl38p-ea-panda-02   2023.10.25-b16.24   Running   0          2023-10-30T15:25:54Z
+   </pre>
+
+
 1. For a visual interface to the ioc namespace on the cluster you can use the
    kubernetes dashboard at this URL:
 
@@ -81,19 +93,19 @@ we will create the repository for the beamline BL16I.
    repository using the command sequence below. (example is for i16 - replace
    i16 with your beamline name)
 
-```bash
-git clone git@github.com:epics-containers/bl38p.git
-mv bl38p bl16i
-cd bl16i
+   ```bash
+   git clone git@github.com:epics-containers/bl38p.git
+   mv bl38p bl16i
+   cd bl16i
 
-# use sed to replace all occurrences of p38 with i16
-sed -i -e s/p38/i16/g -e s/38p/16i/g -e s/38P/16I/g $(find * -type f)
+   # use sed to replace all occurrences of p38 with i16 (in all its various forms)
+   sed -i -e s/p38/i16/g -e s/38p/16i/g -e s/38P/16I/g $(find * -type f)
 
-# this will create a new repo for you in gitlab - CHECK FOR TYPOS
-git remote set-url origin git@gitlab.diamond.ac.uk:controls/containers/beamline/bl16i.git
-git commit -am'switch to i16'
-git push -u origin main
-```
+   # this will create a new repo for you in gitlab - CHECK FOR TYPOS
+   git remote set-url origin git@gitlab.diamond.ac.uk:controls/containers/beamline/bl16i.git
+   git commit -am'switch to i16'
+   git push -u origin main
+   ```
 
 2. Implement your own IOC instances for the new domain by adding subfolders
    to /iocs. There will be example IOCs from the beamline you copied already in
