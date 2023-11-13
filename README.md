@@ -137,7 +137,7 @@ we will create the repository for the beamline BL16I.
      put the following in the values.yaml file:
 
      ```yaml
-     image: ghcr.io/epics-containers/ioc-adaravis-linux-runtime:2023.11.1b5
+     image: ghcr.io/epics-containers/ioc-adaravis-linux-runtime:2023.11.2
      ```
 
      This yaml file may also override any of the settings in the beamline
