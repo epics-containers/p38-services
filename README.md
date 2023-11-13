@@ -79,8 +79,12 @@ as follows:
    https://k8s-p38-dashboard.diamond.ac.uk/#/pod?namespace=p38-iocs
 
 
-How to Create a New Beamline or Accelerator Domain
-==================================================
+How to Create a New Beamline / Accelerator Domain
+=================================================
+
+NOTE: These instructions are DLS specific. Please see
+[epics-containers docs](https://epics-containers.github.io/main/user/tutorials/create_beamline.html)
+for more general instructions.
 
 The p38 beamline is a reference implementation of a DLS beamline so we use it
 as a template for other beamlines and accelerator domains.
