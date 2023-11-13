@@ -16,10 +16,15 @@ echo "Loading IOC environment for BL38P ..."
 # the namespace to use for kubernetes deployments
 export EC_K8S_NAMESPACE=p38-iocs
 # the git repo for this beamline (or accelerator domain)
-export EC_DOMAIN_REPO=git@gitlab.diamond.ac.uk:controls/containers/beamline/bl38p.git
+export EC_DOMAIN_REPO=git@github.com:epics-containers/bl38p.git
 # declare your centralised log server Web UI
 export EC_LOG_URL='https://graylog2.diamond.ac.uk/search?rangetype=relative&fields=message%2Csource&width=1489&highlightMessage=&relative=172800&q=pod_name%3A{ioc_name}*'
-
+# declare mapping between git repo and container registry using regex
+# format is one new line per mapping "matching regex <space> replacement"
+export EC_REGISTRY_MAPPING_REGEX='
+.*github.com:(.*)\/(.*) ghcr.io/\1/\2
+.*gitlab.diamond.ac.uk.*\/(.*) gcr.io/diamond-privreg/controls/prod/ioc/\1
+'
 
 #  use the ec version from dls_sw/work/python3
 mkdir -p $HOME/.local/bin
