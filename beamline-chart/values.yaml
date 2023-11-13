@@ -71,7 +71,7 @@ dataVolume:
 # use the shared PVC for publishing opi files over http (see services/opis)
 opisClaim: bl38p-opi-claim
 # use the shared PVC for publishing opi files over http (see services/opis)
-runtimeClaim: 38p-runtime-claim
+runtimeClaim: bl38p-runtime-claim
 # use the shared PVC autosave files (comment out for no autosave)
 autosaveClaim: bl38p-autosave-claim
 

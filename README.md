@@ -98,11 +98,24 @@ we will create the repository for the beamline BL16I.
    mv bl38p bl16i
    cd bl16i
 
+   # this will create a new repo for you in gitlab - CHECK FOR TYPOS
+   git remote set-url origin git@gitlab.diamond.ac.uk:controls/containers/beamline/bl16i.git
+   ```
+
+2. Edit the contents to match your new beamline / accelerator domain name.
+   as follows (example is for i16 - replace i16 with your beamline name):
+
+   ```bash
    # use sed to replace all occurrences of p38 with i16 (in all its various forms)
    sed -i -e s/p38/i16/g -e s/38p/16i/g -e s/38P/16I/g $(find * -type f)
 
-   # this will create a new repo for you in gitlab - CHECK FOR TYPOS
-   git remote set-url origin git@gitlab.diamond.ac.uk:controls/containers/beamline/bl16i.git
+   # manually edit 'environment.sh' setting EC_DOMAIN_REPO to the new repo name
+   # you supplied in step 1.
+
+   # manually edit 'README.md' as needed. Remove this section
+   # 'How to Create a New Beamline or Accelerator Domain'
+
+   # commit your changes to the new gitlab repo
    git commit -am'switch to i16'
    git push -u origin main
    ```
