@@ -1,7 +1,8 @@
-image: ghcr.io/pandablocks/pandablocks-ioc:0.2.2b3
-iocConfig: /epics/ioc
+shared:
+  ioc-instance:
+    image: ghcr.io/pandablocks/pandablocks-ioc:0.2.2b3
+    iocConfig: /epics/ioc
 
-securityContext:
-  runAsUser: 37143
-  runAsGroup: 37143
-
+    securityContext:
+      runAsUser: 37143
+      runAsGroup: 37143

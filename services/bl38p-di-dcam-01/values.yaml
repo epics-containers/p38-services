@@ -1,14 +1,16 @@
-# latest container image for GigE cameras from the GitHub Container Registry
-image: ghcr.io/epics-containers/ioc-adaravis-linux-runtime:2023.11.1b5
+shared:
+  ioc-instance:
+    # latest container image for GigE cameras from the GitHub Container Registry
+    image: ghcr.io/epics-containers/ioc-adaravis-linux-runtime:2023.11.1b5
 
-# use p38detector account ID and group ID for access to /dls/p38/data
-# NOTE: replace this with the correct account ID and group ID for your beamline
-securityContext:
-  runAsUser: 37143
-  runAsGroup: 37143
+    # use p38detector account ID and group ID for access to /dls/p38/data
+    # NOTE: replace this with the correct account ID and group ID for your beamline
+    securityContext:
+      runAsUser: 37143
+      runAsGroup: 37143
 
-# running flat out a GigE camera may require more resources than beamline defaults
-resources:
-  limits:
-    cpu: 500m
-    memory: 1Gi
+    # running flat out a GigE camera may require more resources than beamline defaults
+    resources:
+      limits:
+        cpu: 500m
+        memory: 1Gi
