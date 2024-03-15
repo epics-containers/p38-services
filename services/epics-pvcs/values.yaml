@@ -1,0 +1,8 @@
+epics-pvcs:
+
+  # the beamline name - only set for beamlines
+  beamline: bl38p
+  # the location where the IOCs will run - same as beamline for beamlines
+  ioc_group: bl38p
+  # the name of the repository in which the IOC is grouped
+  location: bl38p
