@@ -14,6 +14,9 @@ shared:
       limits:
         cpu: 500m
         memory: 1Gi
+      requests:
+        cpu: 100m
+        memory: 200Mi
 
     dataVolume:
       # don't create a pvc - instead we will mount a host folder
