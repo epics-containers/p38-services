@@ -6,3 +6,11 @@ shared:
     securityContext:
       runAsUser: 37143
       runAsGroup: 37143
+
+    dataVolume:
+      # don't create a pvc - instead we will mount a host folder
+      pvc: false
+      # A path on the host machine to write data into. Also used as the path where
+      # the folder will be mounted inside of the container so that users need not
+      # be confused about inside/outside container paths.
+      hostPath: /dls/p38/data
